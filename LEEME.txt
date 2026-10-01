@@ -1,0 +1,27 @@
+DASHBOARD DE VOTACIONES - SAN SALVADOR SUR (2021 y 2024)
+========================================================
+
+Este paquete trae dos versiones del mismo dashboard:
+
+1) votaciones.html  (versión web, sin instalar nada)
+   - Ábrelo con doble clic en cualquier navegador (Chrome, Edge, Firefox).
+   - Los datos y los logos ya vienen dentro del archivo.
+   - Necesita internet solo para cargar la librería del mapa (OpenLayers)
+     y el mapa de calles de fondo (OpenStreetMap vía OSM France, sin clave de API).
+
+2) dashboard_python/  (versión en Python con Dash)
+   - Lee el Excel directamente: si reemplazas
+     dashboard_python/datos/APP_POLITICA_SSSUR.xlsx por uno nuevo
+     y reinicias, el dashboard se actualiza.
+   - Para ejecutarlo:
+       cd dashboard_python
+       python -m venv venv
+       venv\Scripts\activate          (Windows)
+       source venv/bin/activate       (Mac / Linux)
+       pip install -r requirements.txt
+       python app.py
+     y abre http://127.0.0.1:8050 en el navegador.
+   - Usa los límites de distritos de data/SAN SALVADOR SUR.geojson,
+     por eso esa carpeta debe quedar junto a dashboard_python.
+
+Más detalles en dashboard_python/README.md.
